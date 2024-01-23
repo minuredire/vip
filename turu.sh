@@ -184,6 +184,7 @@ function is_root() {
 # Buat direktori xray
 print_install "Membuat direktori xray"
     mkdir -p /etc/xray
+    mkdir /backup >> /dev/null 2>&1
     curl -s ifconfig.me > /etc/xray/ipvps
     touch /etc/xray/domain
     mkdir -p /var/log/xray
